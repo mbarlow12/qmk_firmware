@@ -1,3 +1,4 @@
+
 {
     "keyboard_name": "Corne",
     "manufacturer": "foostan",
@@ -8,9 +9,9 @@
         "pid": "0x0001",
         "device_version": "0.0.1"
     },
-    "rgb_matrix": {
-        "driver": "ws2812"
-    },
+
+
+
     "features": {
         "bootmagic": true,
         "extrakey": true,
@@ -18,9 +19,9 @@
         "nkro": true,
         "oled": true
     },
-    "build": {
-        "lto": true
-    },
+
+
+
     "matrix_pins": {
         "cols": [ "GP29", "GP28", "GP27", "GP26", "GP22", "GP20" ],
         "rows": [ "GP4", "GP5", "GP6", "GP7" ]
