@@ -26,10 +26,31 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define MASTER_LEFT
 // #define MASTER_RIGHT
-// #define EE_HANDS
-
-//#define QUICK_TAP_TERM 0
+// #define EE_HAND#define QUICK_TAP_TERM 0
 //#define TAPPING_TERM 100
+#define TAPPING_TERM 200
+// #define TAPPING_TERM_PER_KEY
+#define PERMISSIVE_HOLD
+
+
+
+#ifdef HOLD_ON_OTHER_KEY_PRESS
+    #undef HOLD_ON_OTHER_KEY_PRESS
+#endif
+
+// #define COMBO_COUNT 2
+// #define COMBO_TERM 40
+
+// #define ONESHOT_TAP_TOGGLE 3  /* Tapping this number of times holds the key until tapped once again. */
+// #define ONESHOT_TIMEOUT 2000  /* Time (in ms) before the one shot key is released */
+
+// cirque 35 pointing configuration
+#ifdef POINTING_DEVICE_DRIVER_cirque_pinnacle_i2c
+#define CIRQUE_PINNACLE_DIAMETER_MM 35
+// Tap for left click.
+#define CIRQUE_PINNACLE_TAP_ENABLE
+#define POINTING_DEVICE_GESTURES_SCROLL_ENABLE
+#endif
 
 #ifdef RGBLIGHT_ENABLE
     #define RGBLIGHT_EFFECT_BREATHING

@@ -1,70 +1,272 @@
-/*
-Copyright 2019 @foostan
-Copyright 2020 Drashna Jaelre <@drashna>
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 #include QMK_KEYBOARD_H
 
-const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [0] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_BSPC,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_ESC,
-  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI,   MO(1),  KC_SPC,     KC_ENT,   MO(2), KC_RALT
-                                      //`--------------------------'  `--------------------------'
 
-  ),
-
-    [1] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_TAB,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0, KC_BSPC,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, XXXXXXX, XXXXXXX,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI, _______,  KC_SPC,     KC_ENT,   MO(3), KC_RALT
-                                      //`--------------------------'  `--------------------------'
-  ),
-
-    [2] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_TAB, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_MINS,  KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS,  KC_GRV,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
-  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI,   MO(3),  KC_SPC,     KC_ENT, _______, KC_RALT
-                                      //`--------------------------'  `--------------------------'
-  ),
-
-    [3] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-        QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI, _______,  KC_SPC,     KC_ENT, _______, KC_RALT
-                                      //`--------------------------'  `--------------------------'
-  )
+/* THIS FILE WAS GENERATED!
+ *
+ * This file was generated by qmk json2c. You may or may not want to
+ * edit it directly.
+ */
+/*
+ * Keycodes
+ */
+enum custom_keycodes {
+    COLEMAK = SAFE_RANGE,
+    SYMBOL,
+    NUMBER,
+    NAV,
+    NAV_PLUS,
+    FUNC,
+    FUNC_PLUS,
+    MT_SCLN,
+    MT_LCBR,
+    MT_AMPR,
+    MT_LBRC,
+    MT_LPN,
+    MT_RPN,
+    MT_DLR,
+    MT_PCT,
+    MT_CIRC,
+    MT_COLN,
+    DRAG_SCROLL
 };
+
+/*
+ * Layers
+ */
+enum layers {
+    _BASE,
+    _SYMBOL,
+    _NUMBER,
+    _NAV,
+    _NAV_PLUS,
+    _FUNC,
+    _FUNC_PLUS
+};
+
+/*
+ * Combos
+ */
+// enum combos {
+//     JK_ESC
+// };
+
+// const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
+
+// combo_t key_combos[COMBO_COUNT] = {
+//     COMBO(jk_combo, KC_ESC)
+// };
+
+/*
+ * Key Macros
+ */
+#define LC_ESC   LCTL_T(KC_ESC)
+#define RC_ESC   RCTL_T(KC_ESC)
+#define RC_ENT  RCTL_T(KC_ENT)
+#define SFT_TAB  LSFT_T(KC_TAB)
+#define OS_ALT OSM(KC_LALT)
+
+/*
+* Home Row Mods
+*/
+// #define GUI_ = LGUI_T(KC_)
+
+// #define ALT_ = LALT_T(KC_)
+// #define SFT_ = LSFT_T(KC_)
+// #define CTL_ = LCTL_T(KC_)
+// QWERTY
+#define GUI_A    LGUI_T(KC_A)
+#define ALT_S    LALT_T(KC_S)
+#define SFT_D    LSFT_T(KC_D)
+#define CTL_F    LCTL_T(KC_F)
+#define GUI_SCLN RGUI_T(KC_SCLN)
+#define ALT_L    RALT_T(KC_L)
+#define SFT_K    RSFT_T(KC_K)
+#define CTL_J    RCTL_T(KC_J)
+
+// dealing with an issue where the home row mods are registering as shifted
+// when pressed, e.g. SFT_PCT should be '(', but it's 9 maybe its the transparency?
+// it's on both sides: and the number layer appears to be correct.
+// SYM
+// GUI_T(/) ALT_T($) SFT_T(%) CTL_T(^)      CTL_T(() SFT_T()) ALT_T(|) GUI_T(`)
+// #define GUI_SCN   LGUI_T(MT_SCLN)
+// #define ALT_LCB  LALT_T(MT_AMPR)
+#define GUI_CLN  LGUI_T(MT_COLN)
+#define ALT_AMP  LALT_T(MT_AMPR)
+#define SFT_LPN  LSFT_T(MT_LPN)
+#define CTL_RPN  LCTL_T(MT_RPN)
+
+#define CTL_DLR  LCTL_T(MT_DLR)
+#define SFT_PCT  RSFT_T(MT_PCT)
+#define ALT_CRC   RALT_T(MT_CIRC)
+
+
+// NUM
+#define CTL_4 RCTL_T(KC_4)
+#define SFT_5 RSFT_T(KC_5)
+#define ALT_6 RALT_T(KC_6)
+
+// NAV
+#define SFT_M2 LSFT_T(KC_BTN2)
+#define CTL_M1 LCTL_T(KC_BTN1)
+#define CTL_DN RCTL_T(KC_DOWN)
+#define SFT_UP RSFT_T(KC_UP)
+#define ALT_RT RALT_T(KC_RGHT)
+#define GUI_WBK RGUI_T(KC_WBAK)
+
+// FUNC
+#define CTL_VOLU RCTL_T(KC_VOLU)
+#define SFT_VOLD RSFT_T(KC_VOLD)
+#define ALT_MSP  RALT_T(KC_MSTP)
+#define GUI_MPL  RGUI_T(KC_MPLY)
+
+// Layer shifts
+#define _SYM_SP_   LT(_SYMBOL, KC_SPC)
+#define _SYM_ENT_   LT(_SYMBOL, KC_ENT)
+#define _NUM_SP_   LT(_NUMBER, KC_SPC)
+#define _NUM_ENT_   LT(_NUMBER, KC_ENT)
+#define _NAVBSP_   LT(_NAV, KC_BSPC)
+#define _FN_ENT_   LT(_FUNC, KC_ENT)
+
+
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+  [_BASE] = LAYOUT_split_3x6_3(
+  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
+       KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_BSPC,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+       KC_ESC,   GUI_A,   ALT_S,   SFT_D,   CTL_F,    KC_G,                         KC_H,   CTL_J,   SFT_K,   ALT_L,GUI_SCLN, KC_QUOT,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+    _NUM_ENT_,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,_SYM_ENT_,
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                           KC_DEL,_NUM_SP_,_NAVBSP_,   _FN_ENT_,_SYM_SP_, KC_PSCR
+                                      //`--------------------------'  `--------------------------'
+  ),
+
+  [_SYMBOL] = LAYOUT_split_3x6_3(
+  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
+      _______, KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_MINS,                      KC_PIPE, KC_AMPR, KC_ASTR, KC_TILD, _______, _______,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      _______, GUI_CLN, ALT_AMP, CTL_RPN, SFT_LPN, KC_UNDS,                      KC_BSLS, CTL_DLR, SFT_PCT, ALT_CRC, GUI_CLN,  KC_DQT,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      _______, KC_SLSH,  KC_DOT,   KC_LT,   KC_GT,  KC_GRV,                       KC_EQL, KC_EXLM,   KC_AT, KC_HASH, KC_PLUS, _______,
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                          _______, _______, KC_BSPC,     KC_ENT, _______, _______
+                                      //`--------------------------'  `--------------------------'
+  ),
+
+  [_NUMBER] = LAYOUT_split_3x6_3(
+  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
+      _______, KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_MINS,                      KC_PIPE,    KC_7,    KC_8,    KC_9,    KC_0, _______,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      _______, GUI_CLN, ALT_AMP, CTL_RPN, SFT_LPN, KC_UNDS,                      KC_BSLS,   CTL_4,   SFT_5,   ALT_6, GUI_CLN, _______,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      _______, KC_SLSH,  KC_DOT,   KC_LT,   KC_GT,  KC_GRV,                       KC_EQL,    KC_1,    KC_2,    KC_3, KC_PLUS, _______,
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                          XXXXXXX, _______, KC_BSPC,     KC_ENT, _______, XXXXXXX
+                                      //`--------------------------'  `--------------------------'
+  ),
+
+  [_NAV] = LAYOUT_split_3x6_3(
+  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
+      XXXXXXX, XXXXXXX, KC_BTN3, KC_BTN2, KC_BTN1, XXXXXXX,                      KC_HOME, KC_PGUP, KC_PGDN,  KC_END,RCTL(KC_PGUP),RCTL(KC_PGDN),
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+     _______,  KC_LGUI, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX,                      KC_LEFT,  CTL_DN,  SFT_UP,  ALT_RT, GUI_WBK, KC_WFWD,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      XXXXXXX, XXXXXXX,  KC_CUT, KC_PAST, KC_COPY, DRAG_SCROLL,                  KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, XXXXXXX, XXXXXXX,
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                          _______, XXXXXXX, XXXXXXX,     KC_ENT, _______, XXXXXXX
+                                      //`--------------------------'  `--------------------------'
+  ),
+
+  [_FUNC] = LAYOUT_split_3x6_3(
+  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
+      XXXXXXX,   KC_F1,   KC_F2,   KC_F3,  KC_F4,  XXXXXXX,                      XXXXXXX, KC_BRID, KC_BRIU, XXXXXXX, XXXXXXX,  EE_CLR,
+  //|--------+--------+--------+--------+--------| -------+-                   |--------+--------+--------+--------+--------+--------|
+      XXXXXXX,   KC_F5,   KC_F6,   KC_F7,  KC_F8,  XXXXXXX,                      KC_MUTE,CTL_VOLU,SFT_VOLD, ALT_MSP, GUI_MPL, DB_TOGG,
+  //|--------+--------+--------+--------+--------| -------+-                   |--------+--------+--------+--------+--------+--------|
+      XXXXXXX,   KC_F9,  KC_F10,  KC_F11,  KC_F12, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT,
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                          XXXXXXX, XXXXXXX, XXXXXXX,    _______, XXXXXXX, XXXXXXX
+                                      //`--------------------------'  `--------------------------'
+  ),
+};
+
+#if defined(ENCODER_ENABLE) && defined(ENCODER_MAP_ENABLE)
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
+
+};
+#endif // defined(ENCODER_ENABLE) && defined(ENCODER_MAP_ENABLE)
+
+// scrolling state for drag scroll key
+bool scrolling = false;
+
+// update mouse record for scrolling when scroll pressed
+report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
+    if (scrolling) {
+        mouse_report.h = mouse_report.x;
+        mouse_report.v = mouse_report.y * -1;
+        mouse_report.x = 0;
+        mouse_report.y = 0;
+    }
+    return mouse_report;
+}
+
+
+/*
+ * QMK cannot use "shifted" keys as arguments to the mod-tap keys. So, we intercept
+ * the key press and manually send the appropriate code.
+ */
+
+/*
+ * Helper function for sending keycodes on tap
+*/
+bool fix_tap(keyrecord_t *rec, uint16_t send) {
+    if (rec->event.pressed && rec->tap.count) {
+        tap_code16(send);
+        return false;
+    }
+    return true;
+}
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    bool retval = true;
+    switch (keycode) {
+
+        case ALT_AMP:
+            retval = fix_tap(record, KC_AMPR);
+            break;
+
+        case CTL_RPN:
+            retval = fix_tap(record, KC_RPRN);
+                break;
+
+        case SFT_LPN:
+            retval = fix_tap(record, KC_LPRN);
+            break;
+
+        case CTL_DLR:
+            retval = fix_tap(record, KC_DLR);
+            break;
+
+        case SFT_PCT:
+            retval = fix_tap(record, KC_PERC);
+            break;
+
+        case ALT_CRC:
+            retval = fix_tap(record, KC_CIRC);
+            break;
+
+        case GUI_CLN:
+            retval = fix_tap(record, KC_COLN);
+            break;
+
+        case DRAG_SCROLL:
+            if (record->event.pressed)
+                scrolling = !scrolling;
+            break;
+        default:
+            return true;
+    }
+    return retval;
+}
+
+
